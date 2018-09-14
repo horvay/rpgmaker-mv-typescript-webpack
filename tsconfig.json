@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "sourceMap": true,
+        "skipLibCheck": true,
+    },
+    "include": [
+        "my_plugins"
+    ],
+    "exclude": [
+        "**/node_modules/**"
+    ]
+}

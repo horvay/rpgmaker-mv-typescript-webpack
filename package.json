@@ -1,0 +1,28 @@
+{
+  "name": "project-name",
+  "main": "index.html",
+  "js-flags": "--expose-gc",
+  "window": {
+    "title": "",
+    "toolbar": false,
+    "width": 816,
+    "height": 624,
+    "icon": "icon/icon.png"
+  },
+  "scripts": {
+      "plugin1-build-linux": "./node_modules/.bin/webpack --config my_plugins/plugin1/webpack.config.js",
+      "plugin1-build": "./node_modules/.bin/webpack.cmd --config my_plugins/plugin1/webpack.config.js",
+      "plugin1-watch": "./node_modules/.bin/webpack.cmd --config my_plugins/plugin1/webpack.config.js --watch",
+      "plugin2-build": "./node_modules/.bin/webpack.cmd --config my_plugins/plugin2/webpack.config.js",
+      "plugin2-watch": "./node_modules/.bin/webpack.cmd --config my_plugins/plugin2/webpack.config.js --watch"
+  },
+  "devDependencies": {
+    "fork-ts-checker-webpack-plugin": "^0.4.9",
+    "rpgmakermv_typescript_dts": "latest",
+    "ts-loader": "^5.1.0",
+    "tslint": "^5.11.0",
+    "typescript": "latest",
+    "webpack": "^4.19.0",
+    "webpack-cli": "^3.1.0"
+  }
+}
