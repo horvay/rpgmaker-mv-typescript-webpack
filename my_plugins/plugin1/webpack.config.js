@@ -1,7 +1,25 @@
 const path = require('path');
+const webpack = require('webpack');
+
 var ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 const pluginName = __dirname.replace(/\\/g, "/").split("/").pop();
+
+const banner = `
+//=============================================================================
+// ${pluginName}.js
+//=============================================================================
+
+/*:
+@plugindesc Plugin to manage the waifu talks.
+@author Your name
+
+@param param1
+@desc param1 description
+@default 0
+
+@help This plugin does not provide plugin commands.
+`
 
 module.exports = {
     entry: [path.resolve(__dirname, './main.ts')],
@@ -22,6 +40,7 @@ module.exports = {
         extensions: [".ts", ".js"]
     },
     plugins: [
-        new ForkTsCheckerWebpackPlugin()
+        new ForkTsCheckerWebpackPlugin(),
+        new webpack.BannerPlugin(banner)
     ],
 };
